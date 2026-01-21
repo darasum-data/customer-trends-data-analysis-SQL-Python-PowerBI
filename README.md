@@ -125,3 +125,17 @@ Based on the insights, the following strategies were proposed:
 
 - **Targeted Marketing Campaigns**  
   - Focus on the **Young Adult** segmen
+
+
+## 📬 Contact
+
+**Dara Sum**
+Data Analyst | SQL & Power BI
+<a href="https://www.linkedin.com/in/darasum-data" target="_blank" 
+   style="display: inline-block; padding: 10px 20px; background-color: #0A66C2; 
+          color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+  Connect on LinkedIn
+</a>
+
+
+```
