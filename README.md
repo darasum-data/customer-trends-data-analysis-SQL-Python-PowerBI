@@ -1,7 +1,3 @@
-I have compiled all the information from the project documents, the technical SQL queries, and the visual dashboards into a professional README.md file.
-
-You can copy the content below and save it as a file named README.md in your repository.
-
 🛒 Customer Shopping Behavior Analysis: End-to-End Data Pipeline
 
 ![alt text](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
