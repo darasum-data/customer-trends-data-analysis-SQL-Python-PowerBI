@@ -1,168 +1,127 @@
-🛒 Customer Shopping Behavior Analysis: End-to-End Data Pipeline
+# 🛒 Customer Shopping Behavior Analysis  
+### End-to-End Data Analytics Pipeline
 
-![alt text](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/SQL-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-Data_Visualization-F2C811?style=flat&logo=powerbi&logoColor=black)
 
-![alt text](https://img.shields.io/badge/SQL-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+---
 
-![alt text](https://img.shields.io/badge/Power_BI-Data_Visualization-F2C811?style=flat&logo=powerbi&logoColor=black)
+## 📌 Project Overview
 
-📌 Project Overview
+A leading retail company aims to better understand **customer shopping behavior** to improve sales performance, customer satisfaction, and long-term loyalty.
 
-A leading retail company aims to better understand its customers' shopping behavior to improve sales, satisfaction, and long-term loyalty. This project analyzes 3,900 transactional records to uncover spending patterns, segment customers, and evaluate product performance using a full-stack data analytics approach.
+This project analyzes **3,900 transactional records** to uncover:
+- Spending patterns  
+- Customer segments  
+- Product and shipping performance  
 
-🔄 Project Workflow
+The solution follows a **full end-to-end data analytics workflow**, from raw data preparation to executive-level dashboards.
 
-The project was executed following a structured 7-step data analyst roadmap:
+---
 
-![alt text](workflow_diagram.png)
+## 🔄 Project Workflow
 
-(Note: Upload your workflow image to the repo and name it workflow_diagram.png)
+The project was executed using a structured **7-step Data Analyst roadmap**:
 
-Business Problem Statement: Defining core objectives.
+![Workflow Diagram](docs/500731798-8bbd5dc9-eb6c-40c1-8f19-c08b4107f654.png)
 
-Data Modeling & EDA (Python): Data cleaning and transformation.
+> 📌 *Note: Upload the workflow image to the repository and name it `workflow_diagram.png`.*
 
-Data Analysis (SQL): Running complex business transactions.
+### Workflow Steps
+1. **Business Problem Definition** – Identify key business objectives  
+2. **Data Modeling & EDA (Python)** – Data cleaning and transformation  
+3. **Data Analysis (SQL)** – Complex analytical queries  
+4. **Data Visualization (Power BI)** – Interactive dashboards  
+5. **Project Report** – Insights and metrics summary  
+6. **Presentation** – Business storytelling using Gamma AI  
+7. **GitHub Documentation** – End-to-end project transparency  
 
-Interactive Dashboard (Power BI): Visualizing patterns and trends.
+---
 
-Project Report: Summarizing findings and metrics.
+## 🛠️ Phase 1: Data Preparation & EDA (Python)
 
-Presentation: Communicating insights via Gamma AI.
+Using **Pandas**, the raw dataset was cleaned and enhanced to ensure high data quality.
 
-GitHub Repository: Documenting the end-to-end process.
+### Key Tasks
+- **Missing Data Handling**  
+  - Imputed **37 missing values** in `review_rating` using the **median rating per product category**
 
-🛠️ Phase 1: Data Preparation & EDA (Python)
+- **Standardization**  
+  - Renamed columns to `snake_case` for readability and database compatibility
 
-Using Pandas, the raw dataset was processed to ensure high data quality:
+- **Feature Engineering**
+  - Created `age_group`:
+    - Young Adult  
+    - Adult  
+    - Middle-aged  
+    - Senior  
+  - Generated `purchase_frequency_days` for time-based analysis
 
-Missing Data Handling: Imputed 37 missing values in the review_rating column using the median rating of each product category.
+- **Data Integration**
+  - Cleaned dataset was loaded into **PostgreSQL** using **SQLAlchemy**
 
-Standardization: Renamed columns to snake_case for better readability and database compatibility.
+---
 
-Feature Engineering:
+## 🔍 Phase 2: SQL Analysis – Business Insights
 
-Binned ages into age_group (Young Adult, Middle-aged, Adult, Senior).
+Advanced SQL queries were executed in **PostgreSQL** to answer key business questions.
 
-Created a purchase_frequency_days column for temporal analysis.
+### Key Findings
+- **Revenue by Gender**
+  - Male customers generated **$157,890**
+  - Female customers generated **$75,191**
 
-Data Integration: Cleaned data was pushed directly into a PostgreSQL database via SQLAlchemy.
+- **Customer Segmentation**
+  - Loyal: **79.9%**
+  - Returning: **17.9%**
+  - New: **2.13%**
 
-🔍 Phase 2: SQL - Business Insights
+- **High-Value Customers**
+  - Identified **839 customers** who used discounts but still spent **above average**
 
-Structured queries were executed in PostgreSQL to simulate business transactions and answer critical questions:
+- **Shipping Strategy**
+  - Express Shipping: **$60.48** average spend  
+  - Standard Shipping: **$58.46** average spend  
 
-Revenue by Gender: Male customers generated significantly higher revenue (
-157
-,
-890
-∗
-∗
-)
-𝑐
-𝑜
-𝑚
-𝑝
-𝑎
-𝑟
-𝑒
-𝑑
-𝑡
-𝑜
-𝐹
-𝑒
-𝑚
-𝑎
-𝑙
-𝑒
-𝑠
-(
-∗
-∗
-157,890∗∗)comparedtoFemales(∗∗
-75,191).
+---
 
-Customer Segmentation: Classified users into Loyal (79.9%), Returning (17.9%), and New (2.13%) segments.
+## 📊 Phase 3: Power BI – Interactive Dashboard
 
-High-Value Users: Identified 839 customers who utilized discounts but still spent above the average purchase amount.
+The Power BI dashboard provides a **360° view of business performance**, with filters for:
 
-Shipping Strategy: Express shipping yielded a higher average spend (
-60.48
-∗
-∗
-)
-𝑐
-𝑜
-𝑚
-𝑝
-𝑎
-𝑟
-𝑒
-𝑑
-𝑡
-𝑜
-𝑆
-𝑡
-𝑎
-𝑛
-𝑑
-𝑎
-𝑟
-𝑑
-(
-∗
-∗
-60.48∗∗)comparedtoStandard(∗∗
-58.46).
+- Subscription Status  
+- Gender  
+- Product Category  
+- Shipping Type  
 
-📊 Phase 3: Power BI - Interactive Dashboard
+![Dashboard Screenshot](dashboards/Dashboard.png)
+> 📌 *Note: Upload the dashboard screenshot and name it `dashboard_screenshot.png`.*
 
-The interactive dashboard provides a 360-degree view of business performance, allowing stakeholders to filter by Subscription Status, Gender, Category, and Shipping Type.
+### Key Performance Indicators (KPIs)
 
-![alt text](dashboard_screenshot.png)
+| Metric | Value |
+|------|------|
+| **Total Revenue** | $233.1K |
+| **Total Customers** | 3.9K |
+| **Average Purchase Value** | $59.76 |
+| **Average Review Rating** | 3.75 |
+| **Avg Previous Purchases** | 25.35 |
 
-(Note: Upload your dashboard screenshot to the repo and name it dashboard_screenshot.png)
+---
 
-Key Performance Indicators (KPIs)
+## 💡 Strategic Recommendations
 
-Total Revenue: $233.1K
+Based on the insights, the following strategies were proposed:
 
-Total Customers: 3.9K
+- **Boost Subscriptions**  
+  - Target the **73% non-subscribers** with exclusive offers
 
-Avg Purchase: $59.76
+- **Loyalty Progression**  
+  - Introduce rewards to convert *Returning* customers into *Loyal* customers
 
-Avg Review Rating: 3.75
+- **Optimize Discount Policy**  
+  - Protect margins on low-margin products (e.g., Hats, Sneakers)
 
-Avg Previous Purchases: 25.35
-
-💡 Strategic Recommendations
-
-Based on the analysis, the following business strategies were proposed:
-
-Boost Subscriptions: Target the 73% of non-subscribers with exclusive benefits.
-
-Loyalty Progression: Implement a reward system to move the "Returning" segment into the "Loyal" group.
-
-Review Discount Policy: Protect margins by optimizing discounts for high-volume but low-margin products like Hats and Sneakers.
-
-Targeted Marketing: Focus high-budget campaigns on the "Young Adult" age group, as they contribute the highest revenue ($62,143).
-
-📂 Project Structure
-code
-Text
-download
-content_copy
-expand_less
-├── dashboards/ # Power BI .pbix file and screenshots
-├── data/ # Raw and cleaned datasets (CSV)
-├── docs/ # PDF documentation and Problem Statements
-├── notebook/ # Jupyter Notebook (.ipynb) for Python EDA
-├── reports/ # Final Project Report and Gamma AI slides
-├── scripts/ # SQL query files (.sql)
-├── LICENSE # MIT License
-└── README.md # Project documentation
-🌟 About Me
-
-Hi there! I'm Dara Sum, also known as Data Analyst.
-
-![alt text](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+- **Targeted Marketing Campaigns**  
+  - Focus on the **Young Adult** segmen
